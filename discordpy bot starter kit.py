@@ -4,7 +4,7 @@ from discord.ext import commands
 client = commands.Bot(command_prefix = '!') #this is your bot prefix, with client u make your commands and events!
 client.run('YOUR BOT TOKEN')
 
-#this is first bot event, which triggers when you run your bot, also u can set your bot status and activity from here.
+#this is the first bot event, which triggers when you run your bot, also u can set your bot status and activity from here.
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game("your bot status"))
@@ -18,7 +18,7 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send ('pong')
 
-#also let's make a command to soo your bot latency.
+#also let's make a command to see your bot latency.
 #remember! always use @client.command() for a command!
 @client.command()
 async def latencyNotEmbed(ctx):
